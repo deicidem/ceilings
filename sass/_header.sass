@@ -1,0 +1,80 @@
+.header
+    &-container
+        max-width: 1250px
+        margin: 0 auto
+        display: flex
+        align-items: center
+        justify-content: space-between
+    &-contacts
+        background-color: #d3d3d3
+        padding: 10px 18px 10px
+        &__item
+            display: flex
+            align-items: center
+        &__link
+            display: inline-block
+            height: 17px
+        &__select
+            margin-left: 10px
+            font-size: 14px
+            font-weight: 700
+            background: none
+            border: none
+            text-decoration: underline
+            position: relative
+            &::before
+                content: '▼'
+                position: absolute
+                right: -18px
+                font-size: 12px
+                top: 3px
+        &__text
+            font-size: 14px
+            font-weight: 700
+            margin-right: 28px
+        &__link
+            margin-right: 24px
+    &-menu
+        padding: 12px 18px 13px
+        background: #fff
+        &__nav
+            ul
+                list-style: none
+                margin: 0
+                padding: 0
+                display: flex
+                justify-content: flex-start
+                align-items: center
+                li
+                    margin-right: 61px
+                    font-size: 16px
+                    font-weight: 700
+                    &:last-child
+                        margin-right: 0
+                    a
+                        text-decoration: none
+        &__contacts
+            display: flex
+            align-items: center
+        &__img
+            margin-right: 8px
+        &__phone
+            display: inline-block
+            margin-bottom: 2px
+            padding-bottom: 1px
+            text-decoration: none
+            border-bottom: 1px dashed $active
+            font-size: 14px
+            font-weight: bold
+            color: $active
+        &__info
+            font-size: 12px
+            font-weight: 700
+
+@media (max-width: 1200px)
+    .header
+        &-menu
+            &__nav
+                ul
+                    li
+                        margin-right: 40px

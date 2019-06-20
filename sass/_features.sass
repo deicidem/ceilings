@@ -1,0 +1,120 @@
+.features
+    overflow: hidden
+    padding-top: 47px
+    padding-bottom: 40px
+    &-container
+        max-width: 950px
+        margin: 0 auto
+    &-info
+        display: flex
+        justify-content: space-between
+        align-items: flex-end
+        margin-bottom: 90px
+    &-why
+        transform: translateX(-150px)
+        font-weight: 700
+        position: relative
+        z-index: 1
+        &__small
+            font-size: 20px
+        &__big
+            padding-left: 5px
+            font-size: 58px
+            &__shadow
+                z-index: -1
+                text-align: center
+                left: -450px
+                top: -135px
+                position: absolute
+                font-weight: 700
+                font-size: 204px
+                line-height: 227.69px
+                opacity: 0.05
+    &-quote
+        z-index: 1
+        padding-bottom: 22px
+        font-weight: 700
+        font-size: 18px
+        font-style: italic
+        position: relative
+        transform: translateX(60px)
+        &::before
+            content: ''
+            position: absolute
+            bottom: 7px
+            left: 0
+            height: 6px
+            width: 97px
+            background: $active
+        &::after
+            content: '‘‘'
+            position: absolute
+            font-size: 60px
+            font-weight: 700
+            font-style: italic
+            top: -37px
+            left: -37px
+    &-items
+        display: flex
+        justify-content: space-between
+        align-items: center
+        flex-wrap: wrap
+
+    &-item
+        display: flex
+        justify-content: space-between
+        align-items: center
+        flex-basis: 45%
+        margin-bottom: 70px
+        &__img
+            margin-right: 19px
+            display: flex
+            align-items: center
+            justify-content: center
+            flex-basis: 118px
+            width: 118px
+            height: 118px
+            border: 1px solid #000000
+            border-radius: 50%
+        &__text
+            flex-basis: 70%
+        &__title
+            font-size: 18px
+            font-weight: 700
+            line-height: 20px
+            margin-bottom: 12px
+        &__desc
+            font-size: 13px
+            font-weight: 700
+            line-height: 14.41px
+    &-list
+        display: flex
+        justify-content: flex-start
+        align-items: flex-start
+        &__text
+            line-height: 40px
+            font-size: 59px
+            font-weight: 700
+            margin-right: 171px
+        ul
+            padding: 0
+            margin: 0
+            list-style: none
+            li
+                font-size: 22px
+                font-weight: 700
+                margin-bottom: 10px
+                position: relative
+                &::before
+                    content: ''
+                    position: absolute
+                    top: 50%
+                    transform: translateY(-50%)
+                    left: -32px
+                    width: 27px
+                    height: 27px
+                    background: url('../img/icons/star.png') center no-repeat
+@media (max-width: 1250px)
+    .features
+        &-why, &-quote
+            transform: translateX(0)

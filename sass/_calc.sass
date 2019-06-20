@@ -1,0 +1,143 @@
+.calc
+    padding: 47px 0
+    &-container
+        max-width: 1160px
+        margin: 0 auto
+    &-title
+        margin: 0
+        font-size: 48px
+        font-weight: 700
+        margin-left: 377px
+        margin-bottom: 10px
+    &-subtitle
+        font-size: 31px
+        font-weight: 700
+        margin-left: 377px
+        margin-bottom: 26px
+    &-main
+        position: relative
+        width: 990px
+        height: 440px
+        margin-left: auto
+        box-shadow: 7px 7px 20px 1px rgba(0, 0, 0, 0.24)
+        background: #ffffff
+        padding: 43px 38px 91px 126px
+        display: flex
+        justify-content: space-between
+        &__settings
+            width: 520px
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+        &__item
+            display: flex
+            justify-content: space-between
+            align-items: center
+            position: relative
+            &:nth-child(3):after, &:nth-child(4):after
+                z-index: 1
+                font-size: 18px
+                position: absolute
+                content: '▼'
+                color: $active
+                right: 22px
+                width: 16px
+                height: 13px
+                top: 15px
+            &__text
+                font-size: 20px
+                font-weight: 700
+                line-height: 22.19px
+                width: 170px
+            &__range
+                max-width: 264px
+
+                &__value
+                    width: 64px
+                    height: 50px
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    border: 1px solid #c2c2c2
+                    font-size: 20px
+                    font-weight: 700
+            &__select
+                color: #000
+                appearance: none
+                padding: 0
+                margin: 0
+                line-height: 50px
+                height: 50px
+                padding-left: 18px
+                border: 1px solid $active
+                font-weight: 700
+                font-size: 20px
+                outline: 1px solid $active
+                background: none
+                width: 328px !important
+                &:hover, &:focus
+                    background: #fff
+                    font-weight: 700
+                    color: #000
+                    outline: 1px solid $active
+                    border: 1px solid $active
+        &__text
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: flex-start
+            text-align: center
+        &__desc
+            font-size: 20px
+            font-weight: 700
+            margin-bottom: 5px
+        &__price
+            font-weight: 700
+            font-size: 20px
+            margin-bottom: 15px
+        &__ask
+            display: flex
+            justify-content: flex-start
+            align-items: center
+            margin-bottom: 74px
+            &__img
+                margin-right: 8px
+            &__text
+                font-size: 12px
+                font-weight: 700
+                p
+                    margin: 0
+                    margin-bottom: 2px
+        &__button
+            width: 241px
+            border: none
+            background: $active
+            height: 139px
+            font-size: 24px
+            font-weight: 700
+    &-phone
+        position: absolute
+        left: -172px
+        top: -147px
+        width: 260px
+        height: 545px
+        max-height: none
+
+
+
+@media (max-width: 1150px)
+    .calc
+        &-container
+            max-width: 1000px
+        &-phone
+            left: -140px
+        &-main
+            width: 900px
+            padding-left: 135px
+            &__settings
+                width: 470px
+            &__item
+                &__range
+                    max-width: 210px
+                &__select
+                    width: 280px !important

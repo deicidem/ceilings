@@ -1,0 +1,157 @@
+.catalog
+    padding-bottom: 37px
+    &-container
+        max-width: 1150px
+        padding: 0px 15px
+        margin: 0 auto
+    &-title
+        margin: 0
+        text-align: center
+        font-size: 48px
+        font-weight: 700
+        margin-bottom: 20px
+    &-text
+        text-align: center
+        font-size: 26px
+        font-weight: 700
+        margin-bottom: 35px
+    &-number
+        &s
+            display: flex
+            justify-content: space-between
+            align-items: center
+            margin-bottom: 25px
+        display: flex
+        align-items: flex-end
+        &__digit
+            font-size: 112px
+            line-height: 100px
+            color: lighten($active, 5)
+            position: relative
+            &::before
+                z-index: 1
+                content: ''
+                position: absolute
+                top: -2px
+                width: 79px
+                height: 69px
+                right: -35px
+                background: url('../img/catalog/plus.png') center no-repeat
+        &__text
+            position: relative
+            z-index: 3
+            padding: 12px 0
+            font-weight: 700
+            font-size: 15px
+        &:first-child
+            align-items: flex-start
+            .catalog-number__text
+                margin-left: -8px
+            .catalog-number__digit::before
+                display: none
+    &-tab
+        background: none
+        border: none
+        font-size: 15px
+        font-weight: 700
+        cursor: pointer
+        color: #b3b3b3
+        outline: none
+        &:hover
+            color: #000
+        &_active
+            color: #000
+        &__eco
+            position: relative
+            &::before
+                content: ''
+                position: absolute
+                top: -10px
+                right: -18px
+                width: 19px
+                height: 27px
+                background: url('../img/catalog/leaf.png') center no-repeat
+        &s
+            width: 830px
+            display: flex
+            justify-content: space-between
+            align-items: center
+            margin: 0 auto
+            margin-bottom: 28px
+    &-slider
+        position: relative
+        &_active
+            display: block
+        .fotorama__arr
+            opacity: 1 !important
+            transform: none !important
+            width: 87px !important
+            height: 70px !important
+            z-index: 5 !important
+            top: 372px !important
+            left: auto !important
+            right: 36px !important
+
+            &--next
+                right: 0 !important
+                transform: rotate(180deg) !important
+                background: #fff url('../img/catalog/arrow-left.png') center no-repeat !important
+            &--prev
+                right: 87px !important
+                background: #fff url('../img/catalog/arrow-left.png') center no-repeat !important
+                &::before
+                    right: 0
+                    content: ''
+                    position: absolute
+                    top: 50%
+                    transform: translateY(-50%)
+                    width: 2px
+                    height: 48px
+                    background-color: #c2c2c2
+
+        .fotorama__nav__shaft
+            display: flex
+            justify-content: space-between
+        .fotorama__thumb-border
+            display: none
+        .fotorama__wrap
+            z-index: 5 !important
+        .fotorama__stage
+            margin-bottom: 20px
+            &__frame
+                z-index: -1
+                .fotorama__img
+                    object-fit: cover
+                    left: 10px !important
+                    width: 913px !important
+        &__info
+            z-index: 7
+            box-shadow: 7px 7px 20px 1px rgba(0, 0, 0, 0.24)
+            width: 330px
+            height: 335px
+            padding: 44px 32px 37px
+            position: absolute
+            right: 0
+            top: 0
+            background: #fff
+        &__title
+            font-size: 18px
+            font-weight: 700
+            margin-bottom: 25px
+        &__text
+            font-size: 18px
+            margin-bottom: 135px
+        &__price
+            font-size: 18px
+            font-weight: 700
+        &__arrows
+            width: 175px
+            height: 70px
+            box-shadow: 7px 7px 20px 1px rgba(0, 0, 0, 0.24)
+            background-color: #ffffff
+            position: absolute
+            z-index: 3
+            right: 0
+            top: 356px
+
+

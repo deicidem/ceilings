@@ -1,0 +1,148 @@
+.main
+    overflow: hidden
+    padding: 150px 0px 36px
+    background: url('../img/main/bg-main.png') center no-repeat
+    background-size: cover
+    z-index: 1
+    position: relative
+    &::before
+        content: ''
+        position: absolute
+        width: 560px
+        height: 483px
+        background: url('../img/main/man.png') center no-repeat
+        bottom: -15px
+        z-index: -1
+        right: 11.5vw
+    &-container
+        max-width: 1130px
+        margin: 0 auto
+
+    &-text
+        margin-left: 44px
+        margin-bottom: 26px
+        &__subtitle
+            font-size: 14px
+            font-weight: 700
+        &__title
+            margin: 0
+            font-size: 52px
+            font-weight: 700
+            line-height: 58.33px
+    &-discount
+        position: relative
+        margin-left: 174px
+        display: inline-block
+        margin-bottom: 20px
+        &__main
+            position: relative
+            background: url('../img/main/bg-disc-main.png') center no-repeat
+            background-size: contain
+            width: 340px
+            height: 83px
+            margin-left: 36px
+            text-align: center
+            z-index: 1
+        &__value
+            z-index: 5
+            top: -3px
+            left: 5px
+            position: absolute
+            font-size: 79px
+            font-weight: 700
+            color: $active
+        &__round
+            z-index: 2
+            right: -10px
+            top: -35px
+            position: absolute
+            width: 69px
+            height: 69px
+            background: $active
+            display: flex
+            align-items: center
+            justify-content: center
+            border-radius: 50%
+            text-align: center
+            font-size: 15px
+            font-weight: 700
+            box-shadow: 2px 2px 4px 1px  rgba(#000, 0.1)
+        &__text
+            text-align: center
+            padding-top: 5px
+            font-size: 27px
+            font-weight: 700
+            span
+                font-weight: 700
+                display: inline-block
+                margin-left: -3px
+                font-size: 33px
+                color: $active
+        &__gift
+            text-align: left
+            font-size: 20px
+            font-weight: 700
+            padding-top: 1px
+            padding-left: 23px
+            position: relative
+            z-index: 5
+            transform: translateY(-5px)
+            color: #fff
+            background: url('../img/main/bg-disc-gift.png') center no-repeat
+            width: 320px
+            height: 34px
+    &-form
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        padding: 16px 18px
+        background: rgba(#fff, 0.83)
+        width: 100%
+        margin-right: 33px
+        &__wrapper
+            display: flex
+            justify-content: space-between
+        &__text
+            font-size: 14px
+            font-weight: 700
+            margin-bottom: 12px
+        &__input
+            width: 208px
+            padding-left: 30px
+            font-size: 14px
+            font-weight: 700
+            border: 1px solid rgba(0, 0, 0, 0.1)
+            line-height: 30px
+            &__wrapper
+                position: relative
+            &__long
+                width: 259px
+            &__icon
+                left: 10px
+                height: 16px
+                position: absolute
+                top: 50%
+                transform: translateY(-50%)
+            &::fisrt-child
+                height: 500px
+            &__button
+                font-size: 14px
+                font-weight: 700
+                line-height: 30px
+                border: 1px solid rgba(0, 0, 0, 0.1)
+                background-color: $active
+                cursor: pointer
+        form
+            display: flex
+            justify-content: space-between
+            align-items: center
+@media (max-width: 1150px )
+    .main
+        &-container
+            max-width: 1000px
+        &-form
+            &__input
+                width: 195px
+                margin-right: 12px
+                &__long
+                    width: 195px

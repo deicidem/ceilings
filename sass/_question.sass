@@ -1,0 +1,64 @@
+.question
+	padding: 136px 0 131px
+	&-container
+		margin: 0 auto
+		max-width: 1130px
+		padding: 0 15px
+		z-index: 1
+		position: relative
+		&::before
+			z-index: -1
+			content: '?'
+			top: -223px
+			left: 467px
+			position: absolute
+			width: 243px
+			height: 394px
+			opacity: 0.3
+			color: $active2
+			font-size: 514px
+			font-weight: bold
+		&::after
+			content: ''
+			position: absolute
+			right: -15px
+			bottom: -150px
+			background: url('../img/questions/cup.png') center no-repeat
+			width: 309px
+			height: 306px
+	&-title
+		font-size: 38px
+		font-weight: 700
+		margin: 0
+		margin-left: 146px
+		margin-bottom: 10px
+	&-subtitle
+		font-weight: 700
+		font-size: 23px
+		margin-left: 476px
+		margin-bottom: 66px
+	&-action
+		display: flex
+		justify-content: space-between
+		align-items: flex-start
+		font-size: 71px
+		opacity: 0.1
+		font-weight: 700
+	&-form
+		width: 200px
+		input
+			width: 100%
+		.offer-button
+			margin-top: 12px
+			text-align: left
+			padding-left: 11px
+
+@media (max-width: 1200px)
+	.question
+		&-container
+			&::after
+				right: 0
+				bottom: -160px
+			&::before
+				left: 50%
+				transform: translateX(-50%)
