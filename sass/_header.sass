@@ -1,4 +1,8 @@
 .header
+    position: fixed
+    width: 100%
+    top: 0
+    z-index: 10
     &-container
         max-width: 1250px
         margin: 0 auto
@@ -32,8 +36,11 @@
             font-size: 14px
             font-weight: 700
             margin-right: 28px
-        &__link
-            margin-right: 24px
+        &__social
+            display: flex
+            justify-content: space-between
+            align-items: center
+            width: 150px
     &-menu
         padding: 12px 18px 13px
         background: #fff
@@ -52,7 +59,11 @@
                     &:last-child
                         margin-right: 0
                     a
+                        transition: all 0.5s
                         text-decoration: none
+                        &:hover
+                            color: $active2
+                            text-decoration: underline
         &__contacts
             display: flex
             align-items: center

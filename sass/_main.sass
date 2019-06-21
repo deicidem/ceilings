@@ -1,4 +1,5 @@
 .main
+    margin-top: 100px
     overflow: hidden
     padding: 150px 0px 36px
     background: url('../img/main/bg-main.png') center no-repeat
@@ -22,6 +23,8 @@
         margin-left: 44px
         margin-bottom: 26px
         &__subtitle
+            letter-spacing: 0.3px
+            padding-left: 3px
             font-size: 14px
             font-weight: 700
         &__title
@@ -32,33 +35,33 @@
     &-discount
         position: relative
         margin-left: 174px
-        display: inline-block
         margin-bottom: 20px
+        z-index: 4
+        display: inline-block
+        &::before
+            z-index: -1
+            top: -35px
+            left: 0
+            content: ''
+            width: 385px
+            height: 145px
+            position: absolute
+            background: url('../img/main/discount.png') center no-repeat
         &__main
+
+            align-items: center
             position: relative
-            background: url('../img/main/bg-disc-main.png') center no-repeat
-            background-size: contain
             width: 340px
-            height: 83px
             margin-left: 36px
             text-align: center
             z-index: 1
-        &__value
-            z-index: 5
-            top: -3px
-            left: 5px
-            position: absolute
-            font-size: 79px
-            font-weight: 700
-            color: $active
         &__round
-            z-index: 2
-            right: -10px
+            z-index: 5
+            right: -7px
             top: -35px
             position: absolute
             width: 69px
             height: 69px
-            background: $active
             display: flex
             align-items: center
             justify-content: center
@@ -68,6 +71,7 @@
             font-weight: 700
             box-shadow: 2px 2px 4px 1px  rgba(#000, 0.1)
         &__text
+            margin-bottom: 13px
             text-align: center
             padding-top: 5px
             font-size: 27px
@@ -88,7 +92,6 @@
             z-index: 5
             transform: translateY(-5px)
             color: #fff
-            background: url('../img/main/bg-disc-gift.png') center no-repeat
             width: 320px
             height: 34px
     &-form
@@ -103,11 +106,12 @@
             display: flex
             justify-content: space-between
         &__text
-            font-size: 14px
+            letter-spacing: -0.03px
+            font-size: 15px
             font-weight: 700
             margin-bottom: 12px
         &__input
-            width: 208px
+            width: 210px
             padding-left: 30px
             font-size: 14px
             font-weight: 700

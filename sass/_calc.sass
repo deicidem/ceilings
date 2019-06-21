@@ -86,7 +86,7 @@
             flex-direction: column
             align-items: center
             justify-content: flex-start
-            text-align: center
+            text-align: left
         &__desc
             font-size: 20px
             font-weight: 700
@@ -100,8 +100,24 @@
             justify-content: flex-start
             align-items: center
             margin-bottom: 74px
+            position: relative
+            &__ansvers
+                display: none
+                top: 0
+                left: 0
+                background: #ffffff
+                border: 1px solid $active2
+                padding: 5px
+                position: absolute
+                max-width: 400px
+                max-height: 400px
+                font-size: 12px
             &__img
                 margin-right: 8px
+            &__img:hover + &__ansvers
+                display: block
+            &__ansvers:hover
+                display: block
             &__text
                 font-size: 12px
                 font-weight: 700
@@ -115,6 +131,7 @@
             height: 139px
             font-size: 24px
             font-weight: 700
+            cursor: pointer
     &-phone
         position: absolute
         left: -172px
